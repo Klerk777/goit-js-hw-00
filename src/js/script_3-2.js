@@ -216,50 +216,50 @@
 //     removePotion(potionName) - видаляє об'єкт зілля з ім'ям potionName з масиву у властивості potions.
 //     updatePotionName(oldName, newName) - оновлює властивість name об'єкта-зілля з назвою oldName на newName в масиві potions.
 //
-// const atTheOldToad = {
-//   potions: [
-//     { name: 'Speed potion', price: 460 },
-//     { name: 'Dragon breath', price: 780 },
-//     { name: 'Stone skin', price: 520 },
-//   ],
-//   // Change code below this line
-//   getPotions() {
-//     return this.potions;
-//   },
-//   addPotion(newPotion) {
-//     for (const potion of this.potions) {
-//       if (Object.values(potion).includes(newPotion.name)) {
-//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
-//       }
-//     }
-//     this.potions.push(newPotion);
-//   },
-//   removePotion(potionName) {
-//     for (let i = 0; i < this.potions.length; i++) {
-//       if (this.potions[i].name === potionName) {
-//         this.potions.splice(i, 1);
-//         return;
-//       }
-//     }
-//     return `Potion ${potionName} is not in inventory!`;
-//   },
-//   /**
-//    * Method for change poison's name
-//    * @param {string} oldName - Old name of poison
-//    * @param {string} newName - New name to which whant to change old one
-//    * @returns
-//    */
-//   updatePotionName(oldName, newName) {
-//     for (const potion of this.potions) {
-//       if (Object.values(potion).includes(oldName)) {
-//         potion.name = newName;
-//         return;
-//       }
-//     }
-//     return `Potion ${oldName} is not in inventory!`;
-//   },
-//   // Change code above this line
-// };
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const potion of this.potions) {
+      if (Object.values(potion).includes(newPotion.name)) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i++) {
+      if (this.potions[i].name === potionName) {
+        this.potions.splice(i, 1);
+        return;
+      }
+    }
+    return `Potion ${potionName} is not in inventory!`;
+  },
+  /**
+   * Method for change poison's name
+   * @param {string} oldName - Old name of poison
+   * @param {string} newName - New name to which whant to change old one
+   * @returns
+   */
+  updatePotionName(oldName, newName) {
+    for (const potion of this.potions) {
+      if (Object.values(potion).includes(oldName)) {
+        potion.name = newName;
+        return;
+      }
+    }
+    return `Potion ${oldName} is not in inventory!`;
+  },
+  // Change code above this line
+};
 
 // // ----  Tests  ------
 // console.log(atTheOldToad.getPotions());
